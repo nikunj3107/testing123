@@ -45,6 +45,7 @@ class H1B():
 if __name__ == '__main__':
 
     if(len(sys.argv) == 4):
+        print(sys.argv)
         h1b = H1B(csv_loc=sys.argv[1],out1 = sys.argv[2],out2= sys.argv[3])
     else:
         h1b = H1B()
