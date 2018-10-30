@@ -40,7 +40,7 @@ class H1B():
             fh.write(header)
             for d in write_data:
         #         print('{0};{1};{2:0.01f}%'.format(state[0],state[1],state[1]/len(a)*100))
-                fh.write('{0};{1};{2}%\n'.format(d[0],d[1],d[1]/total_apps*100))
+                fh.write('{0};{1};{2}%\n'.format(d[0],d[1],round(float(d[1]/total_apps)*100),1))
 
 if __name__ == '__main__':
 
