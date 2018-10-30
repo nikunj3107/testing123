@@ -1,14 +1,14 @@
 from collections import Counter
 import sys
 import operator
-
+import io
 
 
 class H1B():
 
     def __init__(self, csv_loc='input/h1b_input.csv',out1 = 'output/top_10_states.txt',out2 = 'output/top_10_occupations.txt'):
 
-        file = open(csv_loc, encoding='utf8')
+        file = io.open(csv_loc, encoding='utf8')
         keys =  file.readline().rstrip('\n').split(';')[1:]
         dict_list =[]
         for line in file:
@@ -45,7 +45,7 @@ class H1B():
 if __name__ == '__main__':
 
     if(len(sys.argv) == 4):
-        print(sys.argv)
+#         print(sys.argv)
         h1b = H1B(csv_loc=sys.argv[1],out1 = sys.argv[2],out2= sys.argv[3])
     else:
         h1b = H1B()
